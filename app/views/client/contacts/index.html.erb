@@ -1,0 +1,8 @@
+<h1>All Contacts</h1>
+<% @contacts.each do |contact| %>
+  <h2><a href="/client/contacts/<%= contact["id"] %>"><%= contact["first_name"] %></a></h2>
+
+  <h3><%= contact["last_name"] %></h3>
+  <h4><%= contact["email"] %></h4>
+  <h4><%= contact["phone_number"] %></h4>
+<% end %>

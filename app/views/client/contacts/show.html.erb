@@ -1,0 +1,16 @@
+
+<h2><%= @contact["first_name"] %></h2>
+<h3>Price: <%= @contact["middle_name"] %></h3>
+<h3>Price: <%= @contact["last_name"] %></h3>
+<h5>Description: <%= @contact["email"] %></h5>
+<h5>Description: <%= @contact["phone_number"] %></h5>
+<h4><%= @contact["bio"] %></h4>
+
+<div>
+  <a href="/client/contacts/<%= @contact["id"] %>/edit">Edit</a>
+
+  <%= form_tag "/client/contacts/#{ @contact["id"] }", method: :delete do %>
+  <input type="submit" value="Delete">
+  <% end %>
+
+</div>
